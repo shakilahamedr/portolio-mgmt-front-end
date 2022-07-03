@@ -1,11 +1,17 @@
-import './App.css';
+//import Home from './Home';
+import Login from './Login';
+import Navbar from './Navbar';
+import ViewAsset from './ViewAsset';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        Front end app for portfolio Management.
-      </header>
+     <Navbar />
+     <div className='content'>
+       {/* <Home /> */}
+       {/* <Login /> */}
+       <ViewAsset />
+     </div>
     </div>
   );
 }

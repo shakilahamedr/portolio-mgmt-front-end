@@ -1,0 +1,26 @@
+{
+    "stockDetailList" : [
+        {
+            "stId" : 10,
+            "stockName" : "CTS",
+            "stockCount" : 10
+        },
+        {
+            "stId" : 12,
+            "stockName" : "SBI",
+            "stockCount" : 10
+        }
+    ],
+    "mutualFundList" : [
+        {
+            "mfId" : 22,
+            "mutualFundName" : "AMF",
+            "mutualFundUnits" : 10
+        },
+        {
+            "mfId" : 23,
+            "mutualFundName" : "CPE",
+            "mutualFundUnits" : 10
+        }
+    ]
+}
