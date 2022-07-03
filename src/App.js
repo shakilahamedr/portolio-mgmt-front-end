@@ -1,18 +1,29 @@
-//import Home from './Home';
 import Login from './Login';
 import Navbar from './Navbar';
+import Home from './Home';
 import ViewAsset from './ViewAsset';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
   return (
+    <Router>
     <div className="App">
      <Navbar />
      <div className='content'>
-       {/* <Home /> */}
-       {/* <Login /> */}
-       <ViewAsset />
-     </div>
+      <Switch>
+        <Route exact  path='/'>
+             <Home /> 
+        </Route>
+        <Route path='/login'>
+          <Login />
+        </Route>
+        <Route path='/viewAsset'>
+             <ViewAsset />
+        </Route>
+       </Switch>
+     </div> 
     </div>
+    </Router>
   );
 }
 

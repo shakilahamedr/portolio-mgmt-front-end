@@ -1,12 +1,11 @@
+import "bootstrap/dist/css/bootstrap.css";
+import {Button} from "react-bootstrap";
 const AssetTables = ({assets}) => {
 
-    // console.log(props);
-    // const assets = props.assets;
-
     return (
-        <div className="AssetTables">
-            <h3>Stock Assets</h3>
-                <table border='1'>
+        <div className="container col-8">
+            <h3 className="text-primary">Stock</h3>
+                <table className="table table-striped table-bordered">
                     <thead>
                         <tr>
                             <th>Stock Id</th>
@@ -15,34 +14,33 @@ const AssetTables = ({assets}) => {
                         </tr>
                     </thead>
                     <tbody>
-                    { assets.stockDetailList.map((stock) => (
-                            <tr key={stock.stId}>
-                                <td>{stock.stId}</td>
-                                <td>{stock.stockName}</td>
-                                <td>{stock.stockCount}</td>
+                        { assets.stockDetailList.map((asset) => (
+                            <tr key={asset.id}>
+                                <td>{asset.id}</td>
+                                <td>{asset.name}</td>
+                                <td>{asset.units}</td>
                             </tr>
-                    
-                            ))}
+                        ))}
                     </tbody>
                 </table>
 
-            <h3>Mutual Fund Assets</h3>
-                <table border='1'>
+                <h3 className="text-primary">Mutual Fund</h3>
+                <table className="table table-striped table-bordered">
                     <thead>
                         <tr>
-                            <th>Mutual Fund Id</th>
-                            <th>Mutual Fund Name</th>
-                            <th>Mutual Fund Units</th>
+                            <th>MutualFund Id</th>
+                            <th>MutualFund Name</th>
+                            <th>MutualFund Units</th>
                         </tr>
                     </thead>
                     <tbody>
-                    { assets.mutualFundList.map((mutFund) => (
-                            <tr key={mutFund.mfId}>
-                                <td>{mutFund.mfId}</td>
-                                <td>{mutFund.mutualFundName}</td>
-                                <td>{mutFund.mutualFundUnits}</td>
+                        { assets.mutualFundList.map((asset) => (
+                            <tr key={asset.id}>
+                                <td>{asset.id}</td>
+                                <td>{asset.name}</td>
+                                <td>{asset.units}</td>
                             </tr>
-                            ))}
+                        ))}
                     </tbody>
                 </table>
         </div>
